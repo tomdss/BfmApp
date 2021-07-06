@@ -1,13 +1,10 @@
 package com.example.framework.mvvm.ui.home;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +19,6 @@ import com.example.framework.mvvm.ui.base.BaseActivity;
 import com.example.framework.mvvm.ui.home.news.NewsFragment;
 import com.example.framework.mvvm.ui.home.profile.ProfileFragment;
 import com.example.framework.mvvm.ui.home.search.SearchFragment;
-import com.example.framework.mvvm.utils.ViewUtils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -33,6 +29,8 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
     private ActivityHomeBinding mBinding;
     private BottomNavigationView mBottomNavigationView;
     private SearchView mSearch;
+
+    private Fragment mFragment;
 
     @Override
     public int getBindingVariable() {
@@ -54,9 +52,10 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
         super.onCreate(savedInstanceState);
         mBinding = getViewDataBinding();
         mViewModel.setNavigator(this);
-        mSearch = mBinding.searchView;
+        mSearch = mBinding.appBarNormal.searchView;
         setUp();
-        showFragment(NewsFragment.newInstance());
+        mFragment = NewsFragment.newInstance();
+        showFragment(mFragment);
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -75,14 +74,16 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
 
     }
 
-    private void showFragment(Fragment fragment) {
+    private boolean showFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.frame_layout, fragment)
                 .commit();
+        return true;
     }
 
     private void setUp() {
+
         mBottomNavigationView = mBinding.bottomNavMenu;
         mBottomNavigationView.setItemIconTintList(null);
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -105,21 +106,22 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.navNews:
-                showFragment(NewsFragment.newInstance());
                 showViewSearch(false);
-                return true;
+                mFragment = NewsFragment.newInstance();
+                break;
             case R.id.navSearch:
-                showFragment(SearchFragment.newInstance());
                 showViewSearch(true);
-                return true;
+                mFragment = SearchFragment.newInstance();
+                break;
             case R.id.navProfile:
-                showFragment(ProfileFragment.newInstance());
                 showViewSearch(false);
-                return true;
-
+                mFragment = ProfileFragment.newInstance();
+                break;
         }
-        return false;
+        showFragment(mFragment);
+        return true;
     }
+
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {

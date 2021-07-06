@@ -6,7 +6,9 @@ import com.example.framework.mvvm.utils.rx.SchedulerProvider;
 
 public class HomeViewModel extends BaseViewModel<HomeNavigator> {
 
+
     public HomeViewModel(DataManager dataManager, SchedulerProvider schedulerProvider) {
         super(dataManager, schedulerProvider);
     }
+
 }

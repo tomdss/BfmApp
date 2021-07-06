@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.custom;
 
 import android.content.Context;
@@ -16,7 +14,6 @@ import android.graphics.drawable.Drawable;
 import androidx.appcompat.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.Log;
-
 
 
 public class RoundedImageView extends AppCompatImageView {

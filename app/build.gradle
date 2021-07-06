@@ -93,6 +93,9 @@ dependencies {
     // view model
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycleVersion"
+
+    // CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
 
 configurations.all {
