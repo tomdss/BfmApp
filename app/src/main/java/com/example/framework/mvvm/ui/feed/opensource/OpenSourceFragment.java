@@ -1,7 +1,4 @@
-
-
 package com.example.framework.mvvm.ui.feed.opensource;
-
 
 import android.os.Bundle;
 import android.view.View;
@@ -18,10 +15,6 @@ import com.example.framework.mvvm.di.component.FragmentComponent;
 import com.example.framework.mvvm.ui.base.BaseFragment;
 
 import javax.inject.Inject;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class OpenSourceFragment extends BaseFragment<FragmentOpenSourceBinding, OpenSourceViewModel>
         implements OpenSourceNavigator, OpenSourceAdapter.OpenSourceAdapterListener {

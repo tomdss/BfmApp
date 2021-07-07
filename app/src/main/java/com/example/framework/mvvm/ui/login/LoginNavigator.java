@@ -1,7 +1,4 @@
-
-
 package com.example.framework.mvvm.ui.login;
-
 
 
 public interface LoginNavigator {

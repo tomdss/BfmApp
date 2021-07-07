@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.base;
 
 import android.content.Context;
@@ -21,9 +19,6 @@ import com.example.framework.mvvm.di.component.FragmentComponent;
 import com.example.framework.mvvm.di.module.FragmentModule;
 
 import javax.inject.Inject;
-
-
-
 
 
 public abstract class BaseFragment<T extends ViewDataBinding, V extends BaseViewModel> extends Fragment {

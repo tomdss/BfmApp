@@ -72,7 +72,6 @@ public class NewsFragment extends BaseFragment<FragmentNewsBinding, NewsViewMode
         mFragmentNewsBinding.rvNewsList.setLayoutManager(linearLayoutManager);
         mFragmentNewsBinding.rvNewsList.setItemAnimator(new DefaultItemAnimator());
         mFragmentNewsBinding.rvNewsList.setAdapter(mNewsAdapter);
-
     }
 
     @Override

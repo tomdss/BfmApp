@@ -1,11 +1,7 @@
-
-
 package com.example.framework.mvvm.ui.base;
 
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
-
-
 
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 

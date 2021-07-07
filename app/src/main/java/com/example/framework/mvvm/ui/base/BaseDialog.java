@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.base;
 
 import android.app.Dialog;
@@ -15,10 +13,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.RelativeLayout;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public abstract class BaseDialog extends DialogFragment {
 

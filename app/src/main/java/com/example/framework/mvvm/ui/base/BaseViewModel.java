@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.base;
 
 import androidx.lifecycle.ViewModel;
@@ -10,8 +8,6 @@ import com.example.framework.mvvm.utils.rx.SchedulerProvider;
 
 import io.reactivex.disposables.CompositeDisposable;
 import java.lang.ref.WeakReference;
-
-
 
 public abstract class BaseViewModel<N> extends ViewModel {
 

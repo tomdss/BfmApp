@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.about;
 
 import android.os.Bundle;
@@ -11,8 +9,6 @@ import com.example.framework.mvvm.R;
 import com.example.framework.mvvm.databinding.FragmentAboutBinding;
 import com.example.framework.mvvm.di.component.FragmentComponent;
 import com.example.framework.mvvm.ui.base.BaseFragment;
-
-
 
 
 public class AboutFragment extends BaseFragment<FragmentAboutBinding, AboutViewModel> implements AboutNavigator {

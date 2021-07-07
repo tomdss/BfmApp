@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.feed.blogs;
 
 import android.content.Intent;
@@ -15,10 +13,6 @@ import com.example.framework.mvvm.databinding.ItemBlogViewBinding;
 import com.example.framework.mvvm.ui.base.BaseViewHolder;
 
 import java.util.List;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class BlogAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 

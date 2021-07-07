@@ -1,14 +1,8 @@
-
-
 package com.example.framework.mvvm.ui.feed.blogs;
 
 import androidx.databinding.ObservableField;
 
 import com.example.framework.mvvm.data.model.api.BlogResponse;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class BlogItemViewModel {
 

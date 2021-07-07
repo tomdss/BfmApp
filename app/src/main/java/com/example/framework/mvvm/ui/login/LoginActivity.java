@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.login;
 
 import android.content.Context;
@@ -13,8 +11,6 @@ import com.example.framework.mvvm.databinding.ActivityLoginBinding;
 import com.example.framework.mvvm.di.component.ActivityComponent;
 import com.example.framework.mvvm.ui.base.BaseActivity;
 import com.example.framework.mvvm.ui.main.MainActivity;
-
-
 
 public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewModel> implements LoginNavigator {
 

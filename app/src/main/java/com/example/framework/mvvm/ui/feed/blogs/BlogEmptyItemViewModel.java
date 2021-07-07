@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.feed.blogs;
 
 

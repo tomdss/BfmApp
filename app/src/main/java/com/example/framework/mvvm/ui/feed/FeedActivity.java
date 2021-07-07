@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.feed;
 
 import android.content.Context;
@@ -18,10 +16,6 @@ import com.example.framework.mvvm.di.component.ActivityComponent;
 import com.example.framework.mvvm.ui.base.BaseActivity;
 
 import javax.inject.Inject;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class FeedActivity extends BaseActivity<ActivityFeedBinding, FeedViewModel> {
 

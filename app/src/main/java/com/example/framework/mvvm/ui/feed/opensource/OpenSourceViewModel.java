@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.feed.opensource;
 
 import androidx.lifecycle.LiveData;
@@ -14,10 +12,6 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.Single;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class OpenSourceViewModel extends BaseViewModel<OpenSourceNavigator> {
 

@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.login;
 
 import android.text.TextUtils;
@@ -9,7 +7,6 @@ import com.example.framework.mvvm.data.model.api.LoginRequest;
 import com.example.framework.mvvm.utils.CommonUtils;
 import com.example.framework.mvvm.utils.rx.SchedulerProvider;
 import com.example.framework.mvvm.ui.base.BaseViewModel;
-
 
 
 public class LoginViewModel extends BaseViewModel<LoginNavigator> {

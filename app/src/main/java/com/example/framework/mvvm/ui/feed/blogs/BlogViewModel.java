@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.feed.blogs;
 
 import androidx.lifecycle.LiveData;
@@ -11,10 +9,6 @@ import com.example.framework.mvvm.utils.rx.SchedulerProvider;
 import com.example.framework.mvvm.ui.base.BaseViewModel;
 
 import java.util.List;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class BlogViewModel extends BaseViewModel<BlogNavigator> {
 

@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.base;
 
 import android.annotation.TargetApi;
@@ -27,8 +25,6 @@ import com.example.framework.mvvm.di.module.ActivityModule;
 import javax.inject.Inject;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-
-
 
 public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseViewModel> extends AppCompatActivity
         implements BaseFragment.Callback {

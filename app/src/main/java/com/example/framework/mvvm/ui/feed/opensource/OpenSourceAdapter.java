@@ -1,5 +1,3 @@
-
-
 package com.example.framework.mvvm.ui.feed.opensource;
 
 import android.content.Intent;
@@ -16,10 +14,6 @@ import com.example.framework.mvvm.ui.base.BaseViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by amitshekhar on 10/07/17.
- */
 
 public class OpenSourceAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
