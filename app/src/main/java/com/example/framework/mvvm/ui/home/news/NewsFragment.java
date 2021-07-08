@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.databinding.library.baseAdapters.BR;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.framework.mvvm.R;
 import com.example.framework.mvvm.data.model.api.NewsItemResponse;
