@@ -4,6 +4,7 @@ import androidx.core.util.Supplier;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.framework.mvvm.ViewModelProviderFactory;
 import com.example.framework.mvvm.data.DataManager;
 import com.example.framework.mvvm.ui.about.AboutViewModel;
 import com.example.framework.mvvm.ui.base.BaseFragment;
@@ -11,12 +12,12 @@ import com.example.framework.mvvm.ui.feed.blogs.BlogAdapter;
 import com.example.framework.mvvm.ui.feed.blogs.BlogViewModel;
 import com.example.framework.mvvm.ui.feed.opensource.OpenSourceAdapter;
 import com.example.framework.mvvm.ui.feed.opensource.OpenSourceViewModel;
+import com.example.framework.mvvm.ui.home.listgame.ListGameViewModel;
 import com.example.framework.mvvm.ui.home.news.NewsAdapter;
 import com.example.framework.mvvm.ui.home.news.NewsViewModel;
 import com.example.framework.mvvm.ui.home.profile.ProfileViewModel;
 import com.example.framework.mvvm.ui.home.search.SearchViewModel;
 import com.example.framework.mvvm.utils.rx.SchedulerProvider;
-import com.example.framework.mvvm.ViewModelProviderFactory;
 
 import java.util.ArrayList;
 
@@ -50,7 +51,7 @@ public class FragmentModule {
     }
 
     @Provides
-    NewsAdapter provideNewsAdapter(){
+    NewsAdapter provideNewsAdapter() {
         return new NewsAdapter(new ArrayList<>());
     }
 
@@ -93,5 +94,12 @@ public class FragmentModule {
         Supplier<ProfileViewModel> supplier = () -> new ProfileViewModel(dataManager, schedulerProvider);
         ViewModelProviderFactory<ProfileViewModel> factory = new ViewModelProviderFactory<>(ProfileViewModel.class, supplier);
         return new ViewModelProvider(fragment, factory).get(ProfileViewModel.class);
+    }
+
+    @Provides
+    ListGameViewModel provideListGameViewModel(DataManager dataManager, SchedulerProvider schedulerProvider) {
+        Supplier<ListGameViewModel> supplier = () -> new ListGameViewModel(dataManager, schedulerProvider);
+        ViewModelProviderFactory<ListGameViewModel> factory = new ViewModelProviderFactory<>(ListGameViewModel.class, supplier);
+        return new ViewModelProvider(fragment, factory).get(ListGameViewModel.class);
     }
 }

@@ -16,7 +16,7 @@ import com.example.framework.mvvm.R;
 import com.example.framework.mvvm.databinding.ActivityHomeBinding;
 import com.example.framework.mvvm.di.component.ActivityComponent;
 import com.example.framework.mvvm.ui.base.BaseActivity;
-import com.example.framework.mvvm.ui.home.news.NewsFragment;
+import com.example.framework.mvvm.ui.home.listgame.ListGameFragment;
 import com.example.framework.mvvm.ui.home.profile.ProfileFragment;
 import com.example.framework.mvvm.ui.home.search.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -54,8 +54,8 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
         mViewModel.setNavigator(this);
         mSearch = mBinding.appBarNormal.searchView;
         setUp();
-        mFragment = NewsFragment.newInstance();
-        showFragment(mFragment);
+        mFragment = ListGameFragment.newInstance();
+        showFragment(mFragment, false);
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -74,12 +74,12 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
 
     }
 
-    private boolean showFragment(Fragment fragment) {
+    public void showFragment(Fragment fragment, Boolean isSearch) {
+        showViewSearch(isSearch);
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.frame_layout, fragment)
                 .commit();
-        return true;
     }
 
     private void setUp() {
@@ -104,21 +104,20 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Boolean isSearch = false;
         switch (menuItem.getItemId()) {
             case R.id.navNews:
-                showViewSearch(false);
-                mFragment = NewsFragment.newInstance();
+                mFragment = ListGameFragment.newInstance();
                 break;
             case R.id.navSearch:
-                showViewSearch(true);
                 mFragment = SearchFragment.newInstance();
+                isSearch = true;
                 break;
             case R.id.navProfile:
-                showViewSearch(false);
                 mFragment = ProfileFragment.newInstance();
                 break;
         }
-        showFragment(mFragment);
+        showFragment(mFragment, isSearch);
         return true;
     }
 

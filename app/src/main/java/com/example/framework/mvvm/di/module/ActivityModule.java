@@ -4,6 +4,7 @@ package com.example.framework.mvvm.di.module;
 import androidx.core.util.Supplier;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.framework.mvvm.ViewModelProviderFactory;
 import com.example.framework.mvvm.data.DataManager;
 import com.example.framework.mvvm.ui.base.BaseActivity;
 import com.example.framework.mvvm.ui.feed.FeedPagerAdapter;
@@ -13,7 +14,6 @@ import com.example.framework.mvvm.ui.login.LoginViewModel;
 import com.example.framework.mvvm.ui.main.MainViewModel;
 import com.example.framework.mvvm.ui.splash.SplashViewModel;
 import com.example.framework.mvvm.utils.rx.SchedulerProvider;
-import com.example.framework.mvvm.ViewModelProviderFactory;
 
 import dagger.Module;
 import dagger.Provides;
